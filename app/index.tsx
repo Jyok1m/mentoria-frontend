@@ -15,11 +15,10 @@ export default function LandingScreen() {
 		<MainContainer style={styles.container}>
 			<View style={styles.subContainer}>
 				<View style={styles.imageContainer}>
-					<Image source={require("@/assets/images/logo_no_bg.png")} style={styles.image} resizeMode="contain" />
+					<Image source={require("@/assets/images/mentoria_logo_no_bg.png")} style={styles.image} resizeMode="contain" />
 				</View>
 				<View style={styles.textContainer}>
-					<Text style={styles.title}>MentorIA</Text>
-					<Text style={styles.subTitle}>Découvrez le pouvoir de l'IA pour vous aider à apprendre et à progresser dans vos centres d'intéret.</Text>
+					<Text style={styles.title}>Découvrez le pouvoir de l'IA pour vous aider à apprendre et à progresser dans vos centres d'intéret.</Text>
 				</View>
 			</View>
 			<PrimaryButton onPress={handleButtonPress} title="Commencer" />
@@ -37,14 +36,15 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 		justifyContent: "center",
 		height: "70%",
-		marginTop: -20,
+		marginTop: -70,
 	},
 
 	// Logo
 	imageContainer: {
-		width: 125,
+		width: "100%",
 		aspectRatio: 1,
 		justifyContent: "center",
+		marginBottom: -100,
 	},
 	image: {
 		width: "100%",
@@ -57,15 +57,9 @@ const styles = StyleSheet.create({
 		paddingHorizontal: 20,
 	},
 	title: {
-		fontSize: 36,
-		fontWeight: 600,
-		color: Colors.primaryText,
-		textAlign: "center",
-		marginVertical: 20,
-	},
-	subTitle: {
 		fontSize: 18,
 		fontWeight: 400,
+		color: Colors.primaryText,
 		textAlign: "center",
 	},
 });
