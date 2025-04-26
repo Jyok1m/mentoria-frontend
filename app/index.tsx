@@ -1,5 +1,6 @@
-import { StyleSheet, Text, View, Image, Pressable } from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
 import { MainContainer } from "@/components/wrappers/MainContainer";
+import { PrimaryButton } from "@/components/utils/PrimaryButton";
 import { Colors } from "@/constants/Colors";
 
 export default function LandingScreen() {
@@ -14,14 +15,7 @@ export default function LandingScreen() {
 					<Text style={styles.subTitle}>Discover personalized learning tailored just for you !</Text>
 				</View>
 			</View>
-			<Pressable
-				onPress={() => {
-					console.log("Button Pressed");
-				}}
-				style={styles.button}
-			>
-				<Text style={styles.buttonText}>Get Started</Text>
-			</Pressable>
+			<PrimaryButton onPress={() => console.log("Button Pressed")} title="Get started" />
 		</MainContainer>
 	);
 }
@@ -32,14 +26,14 @@ const styles = StyleSheet.create({
 		justifyContent: "center",
 		paddingHorizontal: 20,
 	},
-
-	// Logo
 	subContainer: {
 		alignItems: "center",
 		justifyContent: "center",
 		height: "70%",
 		marginTop: -20,
 	},
+
+	// Logo
 	imageContainer: {
 		width: 125,
 		aspectRatio: 1,
@@ -66,21 +60,5 @@ const styles = StyleSheet.create({
 		fontSize: 18,
 		fontWeight: 400,
 		textAlign: "center",
-	},
-
-	// CTA button
-	button: {
-		backgroundColor: Colors.primary,
-		padding: 15,
-		borderRadius: 10,
-		marginTop: 20,
-		width: "100%",
-		alignItems: "center",
-		justifyContent: "center",
-	},
-	buttonText: {
-		color: Colors.background,
-		fontSize: 18,
-		fontWeight: "bold",
 	},
 });
