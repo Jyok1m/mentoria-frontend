@@ -12,10 +12,10 @@ export default function LandingScreen() {
 				</View>
 				<View style={styles.textContainer}>
 					<Text style={styles.title}>MentorIA</Text>
-					<Text style={styles.subTitle}>Discover personalized learning tailored just for you !</Text>
+					<Text style={styles.subTitle}>Découvrez le pouvoir de l'IA pour vous aider à apprendre et à progresser dans vos centres d'intéret.</Text>
 				</View>
 			</View>
-			<PrimaryButton onPress={() => console.log("Button Pressed")} title="Get started" />
+			<PrimaryButton onPress={() => console.log("Button Pressed")} title="Commencer" />
 		</MainContainer>
 	);
 }
