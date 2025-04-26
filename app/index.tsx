@@ -1,9 +1,16 @@
+import { useRouter } from "expo-router";
 import { StyleSheet, Text, View, Image } from "react-native";
 import { MainContainer } from "@/components/wrappers/MainContainer";
 import { PrimaryButton } from "@/components/utils/PrimaryButton";
 import { Colors } from "@/constants/Colors";
 
 export default function LandingScreen() {
+	const router = useRouter();
+
+	const handleButtonPress = () => {
+		router.push("/signUp");
+	};
+
 	return (
 		<MainContainer style={styles.container}>
 			<View style={styles.subContainer}>
@@ -15,7 +22,7 @@ export default function LandingScreen() {
 					<Text style={styles.subTitle}>Découvrez le pouvoir de l'IA pour vous aider à apprendre et à progresser dans vos centres d'intéret.</Text>
 				</View>
 			</View>
-			<PrimaryButton onPress={() => console.log("Button Pressed")} title="Commencer" />
+			<PrimaryButton onPress={handleButtonPress} title="Commencer" />
 		</MainContainer>
 	);
 }
